@@ -4,6 +4,8 @@ react 后台管理项目
 2. DLand-Team ,脚手架vite-react18-redux-ts（https://github.com/DLand-Team/moderate-react-admin/tree/master/frontend）
 3. paicoding-admin，脚手架 React18、React-Router v6、React-Hooks、TypeScript、Vite3（https://github.com/itwanger/paicoding-admin）
 
+### 默认项目模板 Hooks-Admin 搭建脚手架
+
 
 ### 三、🔨🔨🔨 项目功能
 
