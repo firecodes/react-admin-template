@@ -1,30 +1,9 @@
-# Hooks-Admin 🚀
 
-### 介绍 📖
+react 后台管理项目
+1. Hooks-Admin ,脚手架vite-react18-redux-ts （https://github.com/HalseySpicy/Hooks-Admin）
+2. DLand-Team ,脚手架vite-react18-redux-ts（https://github.com/DLand-Team/moderate-react-admin/tree/master/frontend）
+3. paicoding-admin，脚手架 React18、React-Router v6、React-Hooks、TypeScript、Vite3（https://github.com/itwanger/paicoding-admin）
 
-🚀🚀🚀 Hooks Admin，基于 React18、React-Router v6、React-Hooks、Redux && Redux-Toolkit、TypeScript、Vite2、Ant-Design 开源的一套后台管理框架。
-
-🌈 Redux-Toolkit 版本请切换到 Redux-Toolkit 分支上
-
-### 项目相关文档 📚
-
-- 项目更新日志：[CHANGELOG.md](./CHANGELOG.md)
-
-### Pro 付费版本 🔥
-
-- 有需要请加底部微信了解、购买
-
-- Link：https://pro.spicyboy.cn
-
-### 一、在线预览地址 👀
-
-- Link：https://hooks.spicyboy.cn
-
-### 二、Git 仓库地址 (欢迎 Star⭐)
-
-- Gitee：https://gitee.com/HalseySpicy/Hooks-Admin
-
-- GitHub：https://github.com/HalseySpicy/Hooks-Admin
 
 ### 三、🔨🔨🔨 项目功能
 
@@ -41,17 +20,7 @@
 - 🚀 使用 husky、lint-staged、commitlint、commitizen、cz-git 规范提交信息（项目规范配置）
 
 熟练掌握react高阶组件()和高阶函数用法
-### 四、安装使用步骤 📑
-
-- **Clone：**
-
-```text
-# Gitee
-git clone https://gitee.com/HalseySpicy/Hooks-Admin.git
-# GitHub
-git clone https://github.com/HalseySpicy/Hooks-Admin.git
-```
-
+ 
 - **Install：**
 
 ```text
@@ -101,21 +70,7 @@ lint:stylelint
 # 提交代码（会自动执行 lint:lint-staged 命令）
 npm run commit
 ```
-
-### 五、项目截图
-
-#### 1、登录页：
-
-![hooks-login-light](https://i.imgtg.com/2023/04/18/ubMWb.png)
-
-![hooks-login-dark](https://i.imgtg.com/2023/04/18/ubOyl.png)
-
-#### 2、首页：
-
-![hooks-home-light](https://i.imgtg.com/2023/04/18/ubasg.png)
-
-![hooks-home-dark](https://i.imgtg.com/2023/04/18/ubqoB.png)
-
+ 
 ### 六、文件资源目录 📚
 
 ```text
@@ -164,38 +119,4 @@ Hooks-Admin
 ├─ tsconfig.json          # typescript 全局配置
 └─ vite.config.ts         # vite 配置
 ```
-
-### 七、浏览器支持
-
-- 本地开发推荐使用 Chrome 最新版浏览器 [Download](https://www.google.com/intl/zh-CN/chrome/)。
-- 生产环境支持现代浏览器，不在支持 IE 浏览器，更多浏览器可以查看 [Can I Use Es Module](https://caniuse.com/?search=ESModule)。
-
-| ![IE](https://i.imgtg.com/2023/04/11/8z7ot.png) | ![Edge](https://i.imgtg.com/2023/04/11/8zr3p.png) | ![Firefox](https://i.imgtg.com/2023/04/11/8zKiU.png) | ![Chrome](https://i.imgtg.com/2023/04/11/8zNrx.png) | ![Safari](https://i.imgtg.com/2023/04/11/8zeGj.png) |
-| :---------------------------------------------: | :-----------------------------------------------: | :--------------------------------------------------: | :-------------------------------------------------: | :-------------------------------------------------: |
-|                   not support                   |                  last 2 versions                  |                   last 2 versions                    |                   last 2 versions                   |                   last 2 versions                   |
-
-### 八、项目后台接口 🧩
-
-项目后台接口完全采用 Mock 数据，感谢以下 Mock 平台支持：
-
-- FastMock： https://www.fastmock.site/
-- EasyMock：https://mock.mengxuegu.com/
-
-### 九、微信交流群
-
-微信群已超过 200 人，需要加我好友，拉大家进群 🤪
-
-|                           微信二维码                           |
-| :------------------------------------------------------------: |
-| <img src="https://i.imgtg.com/2023/01/16/QRbJL.png" width=170> |
-
-### 十、捐赠 🍵
-
-如果你正在使用这个项目或者喜欢这个项目的，可以通过以下方式支持我：
-
-- Star、Fork、Watch 一键三连 🚀
-- 通过微信、支付宝一次性捐款 ❤
-
-|                                        微信                                        |                                       支付宝                                       |
-| :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
-| <img src="https://i.imgtg.com/2023/01/16/QRzBX.png" alt="Alipay QRcode" width=170> | <img src="https://i.imgtg.com/2023/01/16/QRFZt.png" alt="Wechat QRcode" width=170> |
+ 
