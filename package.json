@@ -1,0 +1,32 @@
+{
+	"name": "dify-chat-root",
+	"private": true,
+	"version": "0.2.0",
+	"scripts": {
+		"build:pkgs": "pnpm --filter @dify-chat/* build",
+		"build": "pnpm build:pkgs && pnpm --filter dify-chat-app-react build",
+		"dev": "pnpm --filter dify-chat-app-react dev",
+		"dev:next": "cd packages/nextjs-app && pnpm dev",
+		"format": "prettier --write .",
+		"lint": "eslint .",
+		"preview": "pnpm --filter dify-chat-app-react preview",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@changesets/cli": "catalog:",
+		"@eslint/compat": "catalog:",
+		"@eslint/js": "catalog:",
+		"@trivago/prettier-plugin-sort-imports": "catalog:",
+		"eslint": "catalog:",
+		"eslint-plugin-react": "catalog:",
+		"eslint-plugin-react-hooks": "catalog:",
+		"globals": "catalog:",
+		"husky": "catalog:",
+		"lint-staged": "catalog:",
+		"prettier": "catalog:",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"typescript": "catalog:",
+		"typescript-eslint": "catalog:"
+	},
+	"packageManager": "pnpm@10.8.1+sha512.c50088ba998c67b8ca8c99df8a5e02fd2ae2e2b29aaf238feaa9e124248d3f48f9fb6db2424949ff901cffbb5e0f0cc1ad6aedb602cd29450751d11c35023677"
+}
