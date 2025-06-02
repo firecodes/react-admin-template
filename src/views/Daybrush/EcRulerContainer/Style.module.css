@@ -1,0 +1,47 @@
+.fs_ruler_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  background-color: #18181c;
+  background-image: linear-gradient(#18181c 14px, transparent 0),
+    linear-gradient(90deg, transparent 14px, #86909c 0);
+  background-size:
+    15px 15px,
+    15px 15px;
+}
+
+.px_box {
+  font-size: 12px;
+  text-align: center;
+  height: 20px;
+}
+
+.content_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.content_button {
+  position: fixed;
+  top: 50px;
+  left: 100px;
+  z-index: 100;
+}
+
+.content_layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content_canvas {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform-origin: left top;
+  background-color: rgb(35, 35, 36);
+  border-radius: 10px;
+}

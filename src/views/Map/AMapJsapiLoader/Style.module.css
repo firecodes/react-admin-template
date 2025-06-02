@@ -1,0 +1,21 @@
+.float {
+  cursor: pointer;
+  vertical-align: center;
+  width: 300px;
+  overflow-y: scroll;
+  max-height: 400px;
+  background-color: #1a2739;
+  position: absolute;
+  top: 66px;
+  left: 32px;
+  z-index: 1;
+}
+.float_item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 10px;
+}
+.float_item:hover {
+  background-color: #273a55;
+}

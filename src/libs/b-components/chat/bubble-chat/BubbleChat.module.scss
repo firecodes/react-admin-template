@@ -1,0 +1,14 @@
+.container {
+
+  // padding: 10px 0;
+  :global {
+    .ant-bubble-content {
+      padding: 10px 0 0 0;
+      min-height: unset;
+    }
+
+    .ant-bubble .ant-bubble-content-filled {
+      background-color: transparent !important;
+    }
+  }
+}

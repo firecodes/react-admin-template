@@ -1,0 +1,23 @@
+.container {
+  .question {
+    margin-bottom: 20px;
+
+    .question-content {
+      background-color: var(--evo-color-bg-container);
+      margin-top: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      padding: 10px;
+      width: fit-content;
+    }
+  }
+
+  .answers-wrap {
+    overflow: auto;
+  }
+
+  .answer-item-container {
+    border-radius: 8px;
+    min-width: 350px;
+  }
+}

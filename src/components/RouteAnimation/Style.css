@@ -1,0 +1,75 @@
+/* 页面从左侧进入动画 */
+.ec-down-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.ec-down-enter-active {
+  opacity: 1;
+  transition: 0.3s;
+  transform: translateY(0px);
+}
+.ec-down-exit {
+  opacity: 0.3;
+  transform: translateY(-100%);
+}
+.ec-down-exit-active {
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(0%);
+}
+
+/* 页面从左侧进入动画 */
+.ec-slide-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.ec-slide-enter-active {
+  opacity: 1;
+  transition: 0.3s;
+  transform: translateX(0px);
+}
+.ec-slide-exit {
+  opacity: 0.3;
+  transform: translateX(-100%);
+}
+.ec-slide-exit-active {
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(0%);
+}
+
+/* 页面从大到小动画  */
+.ec-scale-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+.ec-scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.ec-scale-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.ec-scale-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* 页面消失动画 */
+.ec-fade-enter {
+  opacity: 0;
+}
+.ec-fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.ec-fade-exit {
+  opacity: 1;
+}
+.ec-fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
