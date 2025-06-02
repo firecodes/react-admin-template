@@ -3,6 +3,7 @@ react 后台管理项目
 1. Hooks-Admin ,脚手架vite-react18-redux-ts （https://github.com/HalseySpicy/Hooks-Admin）
 2. DLand-Team ,脚手架vite-react18-redux-ts（https://github.com/DLand-Team/moderate-react-admin/tree/master/frontend）
 3. paicoding-admin，脚手架 React18、React-Router v6、React-Hooks、TypeScript、Vite3（https://github.com/itwanger/paicoding-admin）
+4. surmon.admin,脚手架vite-react18-context （https://github.com/surmon-china/surmon.admin）
 
 ### 默认项目模板 Hooks-Admin 搭建脚手架
 
