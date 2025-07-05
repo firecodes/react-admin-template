@@ -33,7 +33,9 @@ const thunkMiddleware: Middleware[] = [thunk]
 // 4.配置根store
 export const store = configureStore({
   reducer: rootReducer, // 合并后的reducer
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }).concat(thunkMiddleware), //添加中间件
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware({ serializableCheck: false }) //.concat(thunkMiddleware)
+  }, //添加中间件
   devTools: true // 开启devtools
 })
 
