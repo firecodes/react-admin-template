@@ -1,0 +1,70 @@
+@import url('./modules/reset.less');
+@import url('./modules/common.less');
+
+/* ------------全局样式表----------*/
+/* 切换主题色 */
+[data-theme='dark'] {
+  --admin-colorBgContainer: #141414; // 主要背景色
+  --admin-colorBgSecondary: #1d1d1d; // 次要背景色
+  --admin-colorText: rgba(255, 255, 255, 0.85); // 文字颜色
+  --admin-colorBorderSecondary: #303030; // 边框颜色
+  --admin-scrollbarThumb: rgba(255, 255, 255, 0.1); // 滚动条颜色
+}
+[data-theme='light'] {
+  --admin-colorBgContainer: #ffffff;
+  --admin-colorBgSecondary: #fafafa;
+  --admin-colorText: rgba(0, 0, 0, 0.88);
+  --admin-colorBorderSecondary: #f0f0f0;
+  --admin-scrollbarThumb: rgba(0, 0, 0, 0.1);
+}
+/* 设置根容器宽高 */
+html,
+body,
+#root,
+.ant-app {
+  height: 100%;
+  background-color: var(--admin-colorBgContainer);
+}
+
+/* 浏览器滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--admin-scrollbarThumb);
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* nprogress 浏览器加载进度条样式 */
+#nprogress .bar {
+  background-color: rgb(224, 210, 17);
+}
+#nprogress .spinner-icon {
+  border-top-color: red;
+  border-left-color: yellow;
+}
+// #nprogress .peg {
+//   box-shadow:
+//     0 0 10px var(--hooks-colorPrimary),
+//     0 0 5px var(--hooks-colorPrimary) !important;
+// }
+
+/* react-transition-group组件过渡动画 */
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.fade-enter-active,
+.fade-exit-active {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(0);
+}
+.fade-exit {
+  opacity: 0;
+  transform: translateX(40px);
+}

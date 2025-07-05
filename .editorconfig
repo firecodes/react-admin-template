@@ -1,0 +1,19 @@
+# 该配置文件主要用于项目开发时，在不同的编辑器能够遵循相同的代码风格和规范
+
+# 设置根目录
+root = true
+
+#表示所有的文件都适用
+[*]
+charset = utf-8 #设置编码格式为utf-8
+end_of_line = lf #设置换行符为lf
+insert_final_newline = true #确保文件以换行符结束
+trim_trailing_whitespace = true #删除行尾的任意空白字符
+indent_style = space #仅能只用空格键进行代码缩进
+indent_size = 2 #代码语句的缩进为2个字符
+max_line_length = 120 #每行代码的最大字符数
+
+#表示.md的文件适用
+[*.md]
+max_line_length = off # 关闭最大行长度限制
+trim_trailing_whitespace = false # 关闭删除行尾的任意空白字符

@@ -1,0 +1,75 @@
+.drawer-content {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  .content-title {
+    flex-basis: 60px;
+  }
+
+  // 主题模式设置
+  .mode-list {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .content-mode {
+      // margin-bottom: 20px;
+      .icon-mode {
+        width: 120px;
+        height: 80px;
+        border-radius: 6px;
+        transition: transform 0.1s;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.02);
+        }
+      }
+      .icon-mode-active {
+        width: 120px;
+        height: 80px;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: box-shadow 0.1s;
+        box-shadow:
+          0 0 0 1px #ffffff,
+          0 0 0 5px #1677ff;
+      }
+      .title-mode {
+        display: inline-block;
+        width: 100%;
+        margin-top: 8px;
+        text-align: center;
+      }
+    }
+  }
+
+  // 主题色设置
+  .select-color {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .color-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 14px;
+
+      .color-item {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: box-shadow 0.1s;
+        &.active {
+          box-shadow:
+            0 0 0 1px #ffffff,
+            0 0 0 5px #1677ff;
+        }
+
+        &:last-child {
+          background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+        }
+      }
+    }
+  }
+}
