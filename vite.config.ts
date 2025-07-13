@@ -1,66 +1,133 @@
-import { defineConfig } from 'vite'
+// import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import { type ConfigEnv, defineConfig, loadEnv, type UserConfig } from "vite";
+
+// import { wrapperEnv } from "./src/utils/getEnv";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  // ÅäÖÃ@·ûºÅµÄÂ·¾¶Ö¸Ïò
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src')
-    }
-  },
-  // È«¾ÖÑùÊ½ÅäÖÃ
-  css: {
-    preprocessorOptions: {
-      less: {
-        // ¶¨ÖÆÖ÷ÌâÉ«
-        // modifyVars: {
-        // 	"primary-color": "#1DA57A",
-        // },
-        // additionalData: `@import "@/styles/var.less";`,
-        javascriptEnabled: true
-      }
-    }
-  },
-  // ´ò°üÅäÖÃ
-  build: {
-    //´ò°üÄ£Ê½£¬terserÈ¥³ıconsole.log()ºÍdebugger,µ«ËÙ¶È¸üÂı¡£Ä¬ÈÏÎªesbuild
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
+export default defineConfig((mode: ConfigEnv): UserConfig => {
+  const env = loadEnv(mode.mode, process.cwd());
+  // const viteEnv = wrapperEnv(env);
+  return {
+    plugins: [
+      react(),
+      // createHtmlPlugin({
+      // 	inject: {
+      // 		data: {
+      // 			title: viteEnv.VITE_GLOB_APP_TITLE
+      // 		}
+      // 	}
+      // }),
+      // // * ä½¿ç”¨ svg å›¾æ ‡
+      // createSvgIconsPlugin({
+      // 	iconDirs: [resolve(process.cwd(), "src/assets/icons")],
+      // 	symbolId: "icon-[dir]-[name]"
+      // }),
+      // // createStyleImportPlugin({
+      // // 	libs: [
+      // // 		{
+      // // 			libraryName: "antd",
+      // // 			esModule: true,
+      // // 			resolveStyle: (name: any) => {
+      // // 				return `antd/es/${name}/style/index`;
+      // // 			}
+      // // 		}
+      // // 	]
+      // // }),
+      // // * EsLint æŠ¥é”™ä¿¡æ¯æ˜¾ç¤ºåœ¨æµè§ˆå™¨ç•Œé¢ä¸Š
+      // eslintPlugin(),
+      // // * æ˜¯å¦ç”ŸæˆåŒ…é¢„è§ˆ
+      // // viteEnv.VITE_REPORT && visualizer(),
+      // // * gzip compress
+      // viteEnv.VITE_BUILD_GZIP &&
+      // viteCompression({
+      // 	verbose: true,
+      // 	disable: false,
+      // 	threshold: 10240,
+      // 	algorithm: "gzip",
+      // 	ext: ".gz"
+      // })
+    ],
+    // esbuild: {
+    //   pure: viteEnv.VITE_DROP_CONSOLE ? ["console.log", "debugger"] : []
+    // },
+    // é…ç½®@ç¬¦å·çš„è·¯å¾„æŒ‡å‘
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src')
       }
     },
-    // ×Ô¶¨Òåµ×²ãµÄ Rollup ´ò°üÅäÖÃ
-    rollupOptions: {
-      // ÅäÖÃ´ò°üºó·ÅÖÃµÄÎÄ¼şÃû
-      output: {
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
-        //   //³¬¹ı500kbµÄÎÄ¼şµ¥¶À´ò°ü
-        // manualChunks(id) {
-        //   if (id.includes('node_modules')) {
-        //     return id.toString().split('node_modules/')[1].split('/')[0].toString()
-        //   }
-        // }
+    // å…¨å±€æ ·å¼é…ç½®
+    css: {
+      preprocessorOptions: {
+        less: {
+          // å®šåˆ¶ä¸»é¢˜è‰²
+          // modifyVars: {
+          // 	"primary-color": "#1DA57A",
+          // },
+          // additionalData: `@import "@/styles/var.less";`,
+          javascriptEnabled: true
+        }
       }
-    }
-  },
-  // ÅäÖÃ¿ª·¢·şÎñÆ÷
-  server: {
-    host: '0.0.0.0',
-    port: 8848,
-    cors: true,
-    open: process.env.BROWSER,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8848',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+    },
+    // é…ç½®å¼€å‘æœåŠ¡å™¨
+    server: {
+      host: '0.0.0.0',
+      port: 5173,
+      cors: true,
+      open: process.env.BROWSER,
+      proxy: {
+        // "/admin": {
+        // 	target: "http://127.0.0.1:8080/",
+        // 	changeOrigin: true,
+        // 	rewrite: path => path.replace(/^\/api/, "")
+        // },
+        // "/api/admin": {
+        // 	target: "https://paicoding.com/api/admin",
+        // 	changeOrigin: true
+        // }
+        // "/smart-admin-api": {
+        // 	target: "https://preview.smartadmin.vip/smart-admin-api/",
+        // 	changeOrigin: true,
+        // 	rewrite: (path) => path.replace(/^\/smart-admin-api/, ""),
+        // },
+        // "/api": {
+        // 	target: "https://paicoding.com/api/",
+        // 	changeOrigin: true,
+        // 	rewrite: (path) => path.replace(/^\/api/, ""),
+        // },
+        '/api': {
+          target: 'http://localhost:5173',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '')
+        }
+      }
+    },
+    // æ‰“åŒ…é…ç½®
+    build: {
+      //æ‰“åŒ…æ¨¡å¼ï¼Œterserå»é™¤console.log()å’Œdebugger,ä½†é€Ÿåº¦æ›´æ…¢ã€‚é»˜è®¤ä¸ºesbuild
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true
+        }
+      },
+      // è‡ªå®šä¹‰åº•å±‚çš„ Rollup æ‰“åŒ…é…ç½®
+      rollupOptions: {
+        // é…ç½®æ‰“åŒ…åæ”¾ç½®çš„æ–‡ä»¶å
+        output: {
+          entryFileNames: 'assets/js/[name]-[hash].js',
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+          //   //è¶…è¿‡500kbçš„æ–‡ä»¶å•ç‹¬æ‰“åŒ…
+          // manualChunks(id) {
+          //   if (id.includes('node_modules')) {
+          //     return id.toString().split('node_modules/')[1].split('/')[0].toString()
+          //   }
+          // }
+        }
       }
     }
   }

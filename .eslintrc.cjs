@@ -42,7 +42,7 @@ module.exports = {
    */
   rules: {
     // 基础语法规则  http://eslint.cn/docs/rules
-    'no-var': 'error', // 要求使用 let 或 const 而不是 var
+    'no-var': 'off', // 要求使用 let 或 const 而不是 var
     'no-dupe-args': 'error', //禁止函数的形参出现相同的变量名
     'no-dupe-keys': 'error', //禁止对象属性中出现相同的属性名
     'no-empty': 'error', //禁止出现空语句块
