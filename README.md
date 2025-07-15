@@ -5,6 +5,11 @@
 ### (项目尚未完善，但基本架构已搭建)
 
 ##### 主要特点：
+yarn add --dev @types/lodash
+npm i --save-dev @types/lodash
+@types/redux-thunk
+yarn add --dev @types/redux-thunk
+
 
 - 纯前端，采用Mock模拟角色登录
 - 轻装上阵，无多余页面结构以及样式
