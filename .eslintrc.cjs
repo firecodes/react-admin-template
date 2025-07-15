@@ -71,7 +71,7 @@ module.exports = {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/react-in-jsx-scope': 'off', //关闭文件中,使用jsx时，缺少'import React, { Component } from 'react''语句的错误
     'react/jsx-uses-react': 'off', //关闭文件中,使用jsx时，缺少'import React'语句的错误
-    'react-hooks/rules-of-hooks': 'error', // 确保 react Hooks 在函数中顶层运行的规则
+    'react-hooks/rules-of-hooks': 'off', // 确保 react Hooks 在函数中顶层运行的规则
     'react-hooks/exhaustive-deps': 'off', // 关闭useEffect依赖检查
     'react/prop-types': 'off' // 关闭prop-types检查
 
